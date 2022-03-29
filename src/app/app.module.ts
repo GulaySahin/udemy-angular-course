@@ -14,6 +14,9 @@ import { RoleComponent } from './role/role.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { IgxNavbarModule, IgxIconModule,IgxButtonModule, IgxNavigationDrawerModule } from 'igniteui-angular';
+import { PostDetailComponent } from './post-detail/post-detail.component';
+import { ClapComponent } from './post-detail/clap/clap.component';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -22,6 +25,9 @@ import { IgxNavbarModule, IgxIconModule,IgxButtonModule, IgxNavigationDrawerModu
     RoleComponent,
     NavbarComponent,
     SidebarComponent,
+    PostDetailComponent,
+    ClapComponent
+
 
   ],
   imports: [
@@ -44,7 +50,7 @@ import { IgxNavbarModule, IgxIconModule,IgxButtonModule, IgxNavigationDrawerModu
     IgxNavigationDrawerModule,
     IgxButtonModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

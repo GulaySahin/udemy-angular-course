@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 import { RoleComponent } from './role/role.component';
 
 
@@ -21,6 +22,16 @@ const routes: Routes = [
   {
     path:"data-binding",
     loadChildren: () => import("./data-binding/data-binding.module").then(m =>m.DataBindingModule)
+  },
+
+  {
+  path:"storage",
+  loadChildren: () => import("./storage/storage.module").then(m =>m.StorageModule)
+  },
+
+  {
+    path:"post-detail",
+    component:PostDetailComponent
   },
 
   {
