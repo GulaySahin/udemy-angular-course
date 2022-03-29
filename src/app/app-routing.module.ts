@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DirectivesComponent } from './directives/directives/directives.component';
 import { HomeComponent } from './home/home.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { RoleComponent } from './role/role.component';
@@ -33,6 +34,10 @@ const routes: Routes = [
     path:"post-detail",
     component:PostDetailComponent
   },
+  {
+    path:"directives",
+    loadChildren: () => import("./directives/directives.module").then(m =>m.DirectivesModule)
+   },
 
   {
     path:"**",

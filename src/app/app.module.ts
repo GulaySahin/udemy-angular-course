@@ -48,7 +48,8 @@ import { CookieService } from 'ngx-cookie-service';
     IgxNavbarModule,
     IgxIconModule,
     IgxNavigationDrawerModule,
-    IgxButtonModule
+    IgxButtonModule,
+
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
