@@ -1,0 +1,19 @@
+.clap {
+  a {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+    .icon {
+      width: 28px;
+      height: 28px;
+      margin-right: 10px;
+    }
+    .count {
+      font-weight: 700;
+    }
+    &:hover {
+      padding-left: 3px;
+    }
+  }
+}
