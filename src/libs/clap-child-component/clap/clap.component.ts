@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-clap',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClapComponent implements OnInit {
 
+  @Input() clapCount:number =0;
+  @Output() changeClap =new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  clap() {
+    this.changeClap.emit();
   }
 
 }

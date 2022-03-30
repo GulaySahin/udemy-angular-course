@@ -15,7 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { IgxNavbarModule, IgxIconModule,IgxButtonModule, IgxNavigationDrawerModule } from 'igniteui-angular';
 import { PostDetailComponent } from './post-detail/post-detail.component';
-import { ClapComponent } from './post-detail/clap/clap.component';
+import { ClapComponent } from '../libs/clap-child-component/clap/clap.component';
 import { CookieService } from 'ngx-cookie-service';
 
 
