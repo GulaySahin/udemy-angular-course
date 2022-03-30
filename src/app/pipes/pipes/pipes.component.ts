@@ -20,14 +20,15 @@ export class PipesComponent implements OnInit {
     baz:"qux",
     nested: {xyz:3 , numbers: [1,2,3,4,5]}
   };
-  cities=[
-    "İstanbul",
-    "İzmir",
-    "Elazığ",
-    "Mersin",
-    "Ankara"
+  cities = [
+    "istanbul",
+    "izmir",
+    "ankara",
+    "edirne",
+    "mersin",
+    "antalya",
+    "samsun"
   ];
-
   cityName="İstanbul";
   constructor() { }
 
