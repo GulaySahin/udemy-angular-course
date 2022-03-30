@@ -34,6 +34,7 @@ const routes: Routes = [
     path:"post-detail",
     component:PostDetailComponent
   },
+
   {
     path:"directives",
     loadChildren: () => import("./directives/directives.module").then(m =>m.DirectivesModule)
@@ -48,6 +49,7 @@ const routes: Routes = [
     loadChildren: () => import("./parents/parents.module").then(m =>m.ParentsModule,
       )
    },
+
 
   {
     path:"**",

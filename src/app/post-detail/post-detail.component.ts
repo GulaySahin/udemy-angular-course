@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostDetailComponent implements OnInit {
 
+  clap=15;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+  clickClap() {
+    console.log("Alkışlandı...");
+    this.clap++;
   }
 
 }
