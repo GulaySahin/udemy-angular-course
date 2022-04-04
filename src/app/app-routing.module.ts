@@ -34,6 +34,7 @@ const routes: Routes = [
     path:"post-detail",
     component:PostDetailComponent
   },
+
   {
     path:"directives",
     loadChildren: () => import("./directives/directives.module").then(m =>m.DirectivesModule)
@@ -54,7 +55,6 @@ const routes: Routes = [
     loadChildren: () => import("./forms/forms.module").then(m =>m.AngularFormsModule,
       )
    },
-
 
   {
     path:"**",
