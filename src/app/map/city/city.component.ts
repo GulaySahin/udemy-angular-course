@@ -10,10 +10,14 @@ export class CityComponent implements OnInit {
 
   citiesData ;
 
-  constructor(private mapService:MapService) { }
+  constructor(private mapService:MapService) {
+    mapService.cityNameSubject.subscribe(data => {
+      this.citiesData=data;
+    })
+  }
 
   ngOnInit()  {
-    this.citiesData=this.mapService.getCityNames();
+    this.mapService.getCityNames();
   }
 
 

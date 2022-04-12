@@ -57,28 +57,36 @@ export class MapService {
     }
   ];
 
+  public cityNameSubject=new Subject<any>();
+  public cityPlakaSubject=new Subject<any>();
+  public cityRegionSubject=new Subject<any>();
+
+
   constructor() { }
 
   getCityNames() {
-    return this.cities.map(elem => ({
+    const data=this.cities.map(elem => ({
       id:elem.id,
       name:elem.name
     }));
+    this.cityNameSubject.next(data);
   }
 
   getCityPlakas() {
-    return this.cities.map(elem => ({
+    const data= this.cities.map(elem => ({
       id:elem.id,
       name:elem.name,
       plaka:elem.plaka
     }));
+    this.cityPlakaSubject.next(data);
   }
   getCityRegions() {
-    return this.cities.map(elem => ({
+    const data= this.cities.map(elem => ({
       id:elem.id,
       name:elem.name,
       region:elem.region
     }));
+    this.cityRegionSubject.next(data);
   }
 
   save(value:city) {
@@ -89,6 +97,10 @@ export class MapService {
     } else {
       this.cities.push(value);
     }
+
+    this.getCityNames();
+    this.getCityPlakas();
+    this.getCityRegions();
 
   }
 

@@ -10,10 +10,14 @@ export class RegionComponent implements OnInit {
 
    regionData;
 
-  constructor(private mapService:MapService) { }
+  constructor(private mapService:MapService) {
+    mapService.cityRegionSubject.subscribe(data => {
+      this.regionData=data;
+    })
+   }
 
   ngOnInit(): void {
-    this.regionData=this.mapService.getCityRegions();
+ this.mapService.getCityRegions();
   }
 
 }
