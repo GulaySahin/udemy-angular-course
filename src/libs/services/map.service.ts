@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 interface city {
   id:number,
@@ -61,6 +61,9 @@ export class MapService {
   public cityPlakaSubject=new Subject<any>();
   public cityRegionSubject=new Subject<any>();
 
+  private cityNameDataSubject$ :BehaviorSubject<any> = new BehaviorSubject([]);
+  cityNameDataSubject = this.cityNameDataSubject$.asObservable();
+
 
   constructor() { }
 
@@ -69,7 +72,8 @@ export class MapService {
       id:elem.id,
       name:elem.name
     }));
-    this.cityNameSubject.next(data);
+    //this.cityNameSubject.next(data);
+    this.cityNameDataSubject$.next(data);
   }
 
   getCityPlakas() {
