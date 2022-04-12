@@ -15,3 +15,5 @@ export * from "./custom-validators/no-white-space.validator";
 export * from "./custom-validators/user-name-exist-validator";
 
 export * from "./services/user.service";
+
+export * from "./services/map.service";
