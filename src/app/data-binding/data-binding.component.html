@@ -3,9 +3,9 @@
     <h2>
       One Way Binding
       <span style="font-size: 0.9rem;">from Component to DOM</span>
-    </h2>
+    </h2><br>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-4">
         <h3>Interpolation</h3>
         <p>Ad : {{ user.name }} , Soyad : {{ user.surname }}</p>
         <p>Hesaplama : {{ 1 + 2 }}</p>
@@ -17,26 +17,27 @@
           />
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4"> <br>
         <h3>Property Binding</h3>
         <input [type]="type" [value]="user.name" />
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-4">
         <h3>Attribute Binding</h3>
         <input
           [type]="type"
           [value]="user.job"
           [attr.disabled]="!user.isEditable ? 'disabled' : null"
         />
-      </div>
-      <div class="col-md-2">
+      </div> <br>
+      <div class="row">
+      <div class="col-md-4">
         <h3>Class Binding</h3>
         <p [class.red]="user.name === 'Ahmet' ? true : false">
           Renk değeri !!!
         </p>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-4">
         <h3>Style Binding</h3>
         <p [style.color]="user.name === 'Ahmet' ? 'orange' : 'blue'">
           Style Color!
@@ -44,14 +45,16 @@
       </div>
     </div>
   </div>
-
+<br>
   <div class="col-md-12">
+    <br>
     <h2>
       One Way Binding
       <span style="font-size: 0.9rem;">from DOM to Component</span>
     </h2>
+    <br>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-6">
         <h3>Event Binding</h3>
         <input
           type="text"
@@ -60,19 +63,20 @@
         />
         <button (click)="buttonClicked()">OK !</button>
       </div>
-    </div>
-  </div>
-
-  <div class="col-md-12">
-    <h2>
-      Two Way Binding
-    </h2>
-    <div class="row">
-      <div class="col-md-12">
-        <h3>ngModel</h3>
-        <input type="text" [(ngModel)]="user.name" />
-        <p>{{ user.name }}</p>
+      <div class="col-md-6">
+        <h2>
+          Two Way Binding
+        </h2>
+        <div class="row">
+          <div class="col-md-12">
+            <h3>ngModel</h3>
+            <input type="text" [(ngModel)]="user.name" />
+            <p>{{ user.name }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
+
 </div>

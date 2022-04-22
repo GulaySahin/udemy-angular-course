@@ -27,25 +27,26 @@
           *ngIf="registerForm?.controls?.['username']?.errors?.['required'] &&
           registerForm?.controls?.['username']?.dirty"
            style="color:red">
-            *Bu alan zorunludur!!
+            *This field is required!!
           </p>
           <p
           *ngIf="registerForm?.controls?.['username']?.errors?.['blackList'] &&
           registerForm?.controls?.['username']?.dirty"
           style="color:red">
-            *Ğ harfi kullanılamaz!!
+            *Ğ letter cannot be used!!
           </p>
           <p
           *ngIf="registerForm?.controls?.['username']?.errors?.['whitespace'] &&
           registerForm?.controls?.['username']?.dirty "
           style="color:red">
-          Boşluk kullanamazsınız!!
+          *you cannot use spaces!!
           </p>
           <p
           *ngIf="registerForm?.controls?.['username']?.errors?.['userNameExist']"
           style="color: red"
         >
-          *Bu isim daha önce kullanılmıştır !!
+          *
+          this name has been used before !!
         </p>
 
 
@@ -53,7 +54,8 @@
           User Name:
           <input type="text" formControlName="username" />
         </label>
-        <button (click)="randomUsername($event)">username türet</button>
+        <button (click)="randomUsername($event)">username
+          derive</button>
       </div>
 
       <div class="col-md-12">
@@ -70,7 +72,8 @@
         class="btn btn-success"
         [disabled]="!registerForm?.valid"
       >
-        Kayıt Ol!
+
+      register!
       </button>
       </div>
     </div>
