@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path:"role",
-    component:RoleComponent
+    loadChildren: () => import("./role/role.module").then(m => m.RoleModule)
   },
   {
     path:"user",

@@ -18,11 +18,12 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { ClapComponent } from '../libs/clap-child-component/clap/clap.component';
 import { CookieService } from 'ngx-cookie-service';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    RoleComponent,
     NavbarComponent,
     SidebarComponent,
     PostDetailComponent,
@@ -35,6 +36,7 @@ import { CookieService } from 'ngx-cookie-service';
     AppRoutingModule,
     CommonModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     ToastrModule.forRoot({
       timeOut: 2000,
       progressBar: true,
