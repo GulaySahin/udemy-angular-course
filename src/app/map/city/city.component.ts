@@ -9,11 +9,17 @@ import { MapService } from 'src/libs';
 export class CityComponent implements OnInit {
 
   citiesData ;
+  citiesData$;
 
-  constructor(private mapService:MapService) { }
+  constructor(private mapService:MapService) {
+   // mapService.cityNameSubject.subscribe(data => {
+     // this.citiesData=data;
+   // })
+   this.citiesData$=mapService.cityNameDataSubject;
+  }
 
   ngOnInit()  {
-    this.citiesData=this.mapService.getCityNames();
+    this.mapService.getCityNames();
   }
 
 
