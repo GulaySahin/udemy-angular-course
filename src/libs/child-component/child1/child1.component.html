@@ -1,8 +1,9 @@
 <p>Child1 component</p>
-Gelen sonuç: {{data | json}}
+
+incoming result {{data | json}}
 
 <div *ngIf="data">
-  {{ data?.name }} kişisi
+  {{ data?.name }} person
   <p *ngIf="data?.status">Başarılıdır.</p>
   <p *ngIf="!data?.status">Başarısızdır.</p>
 </div>

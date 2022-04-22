@@ -1,16 +1,16 @@
 <div style="margin: 2rem;">
   <div class="row">
-    <div class="col-md-3">isim : <input type="text" [(ngModel)]="name" /></div>
+    <div class="col-md-3">Name : <input type="text" [(ngModel)]="name" /></div>
     <div class="col-md-3">
-      başarı durumu :
+      success status  :
       <select [(ngModel)]="successStatus">
-        <option value="0">Seçin</option>
-        <option [ngValue]="true">Başarılı</option>
-        <option [ngValue]="false">Başarısız</option>
+        <option value="0">choose</option>
+        <option [ngValue]="true">successful</option>
+        <option [ngValue]="false">unsuccessful</option>
       </select>
     </div>
     <div class="col-md-2">
-      <button (click)="calculate()">Çalıştır</button>
+      <button (click)="calculate()">run</button>
     </div>
     <div class="col-md-2">
       <button (click)="child1.alertSth()">Child Component Trigger</button>

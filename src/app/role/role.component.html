@@ -1,18 +1,20 @@
 <div class="row">
 <div class="col-md-9 offset-md-3">
   <form #roleForm="ngForm" class="form-group" (ngSubmit)="addNewRole(roleForm)" >
+    <h4>Role Form</h4>
     <label for="name">id</label> <br />
     <input class="form-control" type="text" name="id" ngModel /> <br />
     <label for="name">name</label> <br />
     <input class="form-control" type="text" name="name" ngModel />
     <br />
-  <button type="submit">Kaydet</button>
+  <button type="submit">Submit</button>
 </form>
-<button (click)="deleteRole(roleForm)">Sil</button>
+<button (click)="deleteRole(roleForm)">Delete</button>
 </div>
 </div>
 
 <ul>
+  <h4>Role List:</h4>
   <li *ngFor="let role of rolesData[0]?.data" >
   id:{{role._id}} <br>
   name:{{role.name}}
